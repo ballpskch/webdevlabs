@@ -1,0 +1,52 @@
+* {
+    --moonblack: #212a31;
+    --moongray: #2e3944;
+    --moonblue: #124e66;
+    --moongreen: #748D92;
+    --mooncream: #D3D9D4;
+    font-family: "Roboto", sans-serif;
+    padding: 5px;
+    margin: 5px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+header{
+    color: var(--moonblack);
+}
+a{
+    text-decoration: none;
+    color: var(--moonblue);
+    margin-right:15px;
+}
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: var(--moongreen);
+    color: var(--moongray);
+    width: fit-content;
+}
+
+#webname{
+    background-color: var(--mooncream)
+}
+
+tr:nth-child(even){
+    background-color:var(--mooncream);
+}
+
+form *{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#submit_button{
+    border-radius: 15%;
+    background-color: var(--mooncream);
+    border:none;
+    
+}
