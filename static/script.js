@@ -49,14 +49,14 @@ function greetingFunc(){
     let d = new Date();
     let h = d.getHours();
     let E = document.getElementById("greetingText")
-    if (h<12){
-        E.innerHTML = "Good morning, my name is Phasakorn Chivatxaranukul";
+    if(20<h<24 || 0<h<5){
+        E.innerHTML = "Good night, my name is Phasakorn Chivatxaranukul";
     }else if(12<h<8){
         E.innerHTML = "Good afternoon, my name is Phasakorn Chivatxaranukul";
     }else if(18<h<20){
         E.innerHTML = "Good evening, my name is Phasakorn Chivatxaranukul";
-    }else if(20<h<20 || 0<h<5){
-        E.innerHTML = "Good night, my name is Phasakorn Chivatxaranukul";
+    }else if (h<12){
+        E.innerHTML = "Good morning, my name is Phasakorn Chivatxaranukul";
     }
 }
 greetingFunc()
