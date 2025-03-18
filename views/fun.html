@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="../static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">
             Phasakorn Chivatxaranukul
@@ -28,7 +28,8 @@
             <h2>Things I love to do for fun</h2>
         </div>
     </header>
-    <ul>
+    <button id="hobbiesButton" onclick="showList()" >Click to see...</button>
+    <ul id="hiddenList">
         <li>Youtube Content Creation</li>
         <li>Podcasting</li>
         <li>Playing Soccer/Football</li>
@@ -36,8 +37,8 @@
         <li>Playing the guitar</li>
         <li>Exploring new cuisines & food spots</li>
     </ul>
-    <footer>
-        © 2025 All Rights Reserved Designed and Coded by Phasakorn Chivatxaranukul
+    <footer id="copyYear">
+        © All Rights Reserved Designed and Coded by Phasakorn Chivatxaranukul
     </footer>
 </body>
 </html>

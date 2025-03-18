@@ -50,3 +50,6 @@ form *{
     border:none;
     
 }
+#hiddenList{
+    display: none
+}

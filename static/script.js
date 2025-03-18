@@ -35,25 +35,26 @@ function findTheBanana(array){
         }
     }
 }
-findTheBanana(L1);
-findTheBanana(L2);
+// findTheBanana(L1);
+// findTheBanana(L2);
 
 function findTheBanana(value){
     if (value == "Banana"){
         alert("We found a banana in the first array")
     }
 }
-L1.forEach(findTheBanana);
+// L1.forEach(findTheBanana);
 
 function greetingFunc(){
     let d = new Date();
     let h = d.getHours();
     let E = document.getElementById("greetingText")
-    if(20<h<24 || 0<h<5){
+    console.log("hour = "+h)
+    if((h>20 && h<24) || (h>0 && h<5)){
         E.innerHTML = "Good night, my name is Phasakorn Chivatxaranukul";
-    }else if(12<h<8){
+    }else if(h>12 && h<18){
         E.innerHTML = "Good afternoon, my name is Phasakorn Chivatxaranukul";
-    }else if(18<h<20){
+    }else if(h>18 && h<20){
         E.innerHTML = "Good evening, my name is Phasakorn Chivatxaranukul";
     }else if (h<12){
         E.innerHTML = "Good morning, my name is Phasakorn Chivatxaranukul";
@@ -61,3 +62,49 @@ function greetingFunc(){
 }
 greetingFunc()
 
+function addYear(){
+    let d = new Date();
+    let y = d.getFullYear();
+    let E = document.getElementById("copyYear");
+    E.innerHTML += y;
+}
+
+function showList(){
+    var button = document.getElementById("hobbiesButton");
+    var list = document.getElementById("hiddenList");
+    list.style.display="block";
+    button.style.display="none";
+}
+
+$(document).ready(function(){
+    $("#longIntro").hide();
+    $("#readLess").hide();
+});
+
+$("#readMore").click(function(){
+    $("#shortIntro").hide();
+    $("#readMore").hide();
+    $("#longIntro").show();
+    $("#readLess").show();
+});
+
+$("#readLess").click(function(){
+    $("#longIntro").hide();
+    $("#readLess").hide();
+    $("#shortIntro").show();
+    $("#readMore").show();
+});
+
+function valid(){
+    var valid = true;
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var comment = document.getElementById("comment");
+    var errorMessage = document.getElementById("validationMessage");
+    if(!name.checkValidity()||!email.checkValidity()||!comment.checkValidity()){
+        errorMessage.innerHTML="Please fill out all required fields in contact form, invalid responses.";
+        errorMessage.style.color="red";
+        errorMessage.style.textAlign="center";
+        errorMessage.style.fontWeight ="bold";
+    }
+}
