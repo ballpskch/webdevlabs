@@ -48,8 +48,34 @@ form *{
     border-radius: 15%;
     background-color: var(--mooncream);
     border:none;
-    
 }
-#hiddenList{
+.funIMG{
+    border-radius:100%;
+    width:75%;
+}
+
+.container{
+    border-radius: 100%; 
+    display: inline-block;
+    border-radius: 10%; 
+    box-shadow: 10px, 5px,5px;
+}
+#advicebutton{
+    border-radius: 15%;
+    background-color: var(--mooncream);
+    border:none;
+}
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#item1,#item2,#item3,#item4{
+    width: 40vw;
+    margin: auto;
+}
+/* #hiddenList{
     display: none
-}
+} */
