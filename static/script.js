@@ -69,12 +69,12 @@ function addYear(){
     E.innerHTML += y;
 }
 
-// function showList(){
-//     var button = document.getElementById("hobbiesButton");
-//     var list = document.getElementById("hiddenList");
-//     list.style.display="block";
-//     button.style.display="none";
-// }
+function showList(){
+    var button = document.getElementById("hobbiesButton");
+    var list = document.getElementById("hiddenList");
+    list.style.display="block";
+    button.style.display="none";
+}
 
 $(document).ready(function(){
     $("#longIntro").hide();
@@ -109,12 +109,21 @@ function valid(){
     }
 }
 
-function getAdvice(){
-    fetch("https://api.adviceslip.com/advice")
-        .then(response => response.json())
-        .then(data => document.getElementById("adviceText").innerText = data.slip.advice)
-        .catch(error=>{
-            document.getElementById("adviceText").innerText = "failed to get advice, please try again.";
-           console.error("Error getting advice",error); 
-        });
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('nav ul');
+  
+    hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+    });
+
+    const currentPath = window.location.pathname.split("/").pop();
+    const navItems = document.querySelectorAll("nav a");
+
+    navItems.forEach(link => {
+        const linkPath = link.getAttribute("href").split("/").pop();
+        if (linkPath === currentPath) {
+            link.classList.add("active");
+        }
+    });
+});
